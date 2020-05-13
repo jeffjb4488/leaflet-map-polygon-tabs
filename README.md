@@ -1,10 +1,12 @@
 # leaflet-map-polygon-tabs
-Leaflet thematic polygon map, with hover info, tabs to display time periods, and data drawn from GeoJSON file
+Leaflet thematic polygon map, with hover info, tabs to display time periods, and data drawn from GeoJSON file.
 
-![Lefalet Map Polygon Tabs Demo](./leaflet-map-polygon-tabs.png)
-
+<p align="center">
+  <img src="./leaflet-map-polygon-tabs.png" alt="Lefalet Map Polygon Tabs Demo"/>
+</p>
+                                                                                     
 ## Demo
-https://datavizforall.github.io/leaflet-map-polygon-tabs
+https://handsondataviz.github.io/leaflet-map-polygon-tabs
 
 ## Credits
 - Map design by [@alvinschang](https://github.com/alvinschang) Connecticut Mirror http://ctmirror.org
@@ -20,4 +22,4 @@ https://datavizforall.github.io/leaflet-map-polygon-tabs
 - This version displays only one GeoJSON map boundary
 
 ## Create your own
-- see Leaflet templates section of *Data Visualization for All* book http://datavizforall.org
+- see Leaflet templates section of *Hands-On Data Visualization* book https://handsondataviz.org
