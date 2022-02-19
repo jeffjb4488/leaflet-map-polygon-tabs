@@ -1,6 +1,6 @@
 // Edit the initial year and number of tabs to match your GeoJSON data and tabs in index.html
-<script src='https://rawgit.com/kartena/Proj4Leaflet/master/lib/proj4-compressed.js'></script>
-<script src='https://kartena.github.io/Proj4Leaflet/src/proj4leaflet.js'></script>
+src='https://rawgit.com/kartena/Proj4Leaflet/master/lib/proj4-compressed.js'
+src='https://kartena.github.io/Proj4Leaflet/src/proj4leaflet.js'
 
 var year = "1870";
 var tabs = 11;
