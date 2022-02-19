@@ -21,15 +21,12 @@ new L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 }).addTo(map);
 
-proj4.defs("urn:ogc:def:crs:EPSG::26987", "+proj=lcc +lat_1=41.48333333333333 +lat_2=41.28333333333333 +lat_0=41 +lon_0=-70.5 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
-
-// Edit to upload GeoJSON data file from your local directory
-$.getJSON("data/polygon_test.geojson",function(json){
-// add GeoJSON layer to the map once the file is loaded
-    geoJsonLayer = L.Proj.geoJson(json ,{
-	    style: style,
-        onEachFeature: onEachFeature
-    }).addTo(map);
+$.getJSON("polygon_test_wgs.geojson", function (data) {
+  geoJsonLayer = L.geoJson(data, {
+    style: style,
+    onEachFeature: onEachFeature
+  }).addTo(map);
+});
 	
 // Edit range cutoffs and colors to match your data; see http://colorbrewer.org
 // Any values not listed in the ranges below displays as the last color
