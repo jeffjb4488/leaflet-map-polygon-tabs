@@ -1,12 +1,12 @@
 // Edit the initial year and number of tabs to match your GeoJSON data and tabs in index.html
-var year = "1910";
+var year = "1870";
 var tabs = 11;
 
 // Edit the center point and zoom level
 var map = L.map('map', {
-  center: [41.79, -72.6],
+  center: [41.46200919428693, -70.56452831433079],
   zoom: 10,
-  scrollWheelZoom: false
+  scrollWheelZoom: true
 });
 
 // Edit links to your GitHub repo and data source credit
@@ -19,7 +19,7 @@ new L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png
 }).addTo(map);
 
 // Edit to upload GeoJSON data file from your local directory
-$.getJSON("town-home-value-index.geojson", function (data) {
+$.getJSON("polygon_test_wgs.geojson", function (data) {
   geoJsonLayer = L.geoJson(data, {
     style: style,
     onEachFeature: onEachFeature
@@ -88,7 +88,7 @@ info.onAdd = function (map) {
 info.update = function (props) {
   var winName =
   this._div.innerHTML = (props ?
-    '<div class="areaName">' + props.town + '</div>' : '<div class="areaName faded"><small>Hover over areas<br>Click tabs or arrow keys</small></div>') + '<div class="areaLabel"><div class="areaValue">Home Value Index</div>' +(props ? '' + (checkNull(props["index" + year])) : '--') + '</div>';
+    '<div class="areaName">' + props.Lot_Number + '</div>' : '<div class="areaName faded"><small>Hover over areas<br>Click tabs or arrow keys</small></div>') + '<div class="areaLabel"><div class="areaValue">Home Value Index</div>' +(props ? '' + (checkNull(props["index" + year])) : '--') + '</div>';
 };
 info.addTo(map);
 
