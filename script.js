@@ -41,7 +41,7 @@ function getColor(d) {
 // In this example, columns follow this pattern: index1910, index1920...
 function style(feature) {
   return {
-    fillColor: getColor(feature.properties["index" + year]),
+    fillColor: getColor(feature.properties["Lot_Number" + year]),
     weight: 1,
     opacity: 1,
     color: 'black',
