@@ -97,7 +97,7 @@ info.onAdd = function (map) {
 info.update = function (props) {
   var winName =
   this._div.innerHTML = (props ?
-    '<div class="areaName">' + props.town + '</div>' : '<div class="areaName faded"><small>Hover over areas<br>Click tabs or arrow keys</small></div>') + '<div class="areaLabel"><div class="areaValue">Home Value Index</div>' +(props ? '' + (checkNull(props["index" + year])) : '--') + '</div>';
+    '<div class="areaName">' + props.Lot_Number + '</div>' : '<div class="areaName faded"><small>Hover over areas<br>Click tabs or arrow keys</small></div>') + '<div class="areaLabel"><div class="areaValue">Home Value Index</div>' +(props ? '' + (checkNull(props["index" + year])) : '--') + '</div>';
 };
 info.addTo(map);
 
@@ -105,7 +105,7 @@ info.addTo(map);
 $(".tabItem").click(function() {
   $(".tabItem").removeClass("selected");
   $(this).addClass("selected");
-  year = $(this).html();
+  Lot_Number = $(this).html();
   // year = $(this).html().split("-")[1];  /* use for school years, eg 2010-11 */
   geoJsonLayer.setStyle(style);
 });
