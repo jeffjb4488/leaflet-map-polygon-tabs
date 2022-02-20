@@ -107,7 +107,7 @@ info.addTo(map);
 $(".tabItem").click(function() {
   $(".tabItem").removeClass("selected");
   $(this).addClass("selected");
-  year = $(this).html();
+  time = $(this).html();
   // year = $(this).html().split("-")[1];  /* use for school years, eg 2010-11 */
   geoJsonLayer.setStyle(style);
 });
