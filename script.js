@@ -28,7 +28,7 @@ new L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png
 
 
 // Edit to upload GeoJSON data file from your local directory
-$.getJSON("town-home-value-index.geojson", function(geojsonTest){
+$.getJSON("test_polygon_wgs_84.geojson", function(geojsonTest){
 // add GeoJSON layer to the map once the file is loaded
     geoJsonLayer = L.geoJson(geojsonTest ,{
 	    style: style,
@@ -52,7 +52,7 @@ function getColor(d) {
 // In this example, columns follow this pattern: index1910, index1920...
 function style(feature) {
   return {
-    fillColor: getColor(feature.properties["index" + year]),
+    fillColor: getColor(feature.properties["Grantee" + year]),
     weight: 1,
     opacity: 1,
     color: 'black',
@@ -99,7 +99,7 @@ info.onAdd = function (map) {
 info.update = function (props) {
   var winName =
   this._div.innerHTML = (props ?
-    '<div class="areaName">' + props.town + '</div>' : '<div class="areaName faded"><small>Hover over areas<br>Click tabs or arrow keys</small></div>') + '<div class="areaLabel"><div class="areaValue">Home Value Index</div>' +(props ? '' + (checkNull(props["index" + year])) : '--') + '</div>';
+    '<div class="areaName">' + props.Lot_Number + '</div>' : '<div class="areaName faded"><small>Hover over areas<br>Click tabs or arrow keys</small></div>') + '<div class="areaLabel"><div class="areaValue">Home Value Index</div>' +(props ? '' + (checkNull(props["Grantee" + year])) : '--') + '</div>';
 };
 info.addTo(map);
 
