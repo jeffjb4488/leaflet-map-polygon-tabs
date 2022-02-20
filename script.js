@@ -87,11 +87,9 @@ info.onAdd = function (map) {
 
 // Edit info box labels (such as props.town) to match properties of the GeoJSON data
 info.update = function (props) {
-var winName =
-  this._div.innerHTML = (props ?
-    '<div class="areaName">' + props.Lot_Number + '</div>' : '<div class="areaName faded"><small>Hover over areas<br>Click tabs or arrow keys</small></div>') + '<div class="areaLabel"><div class="areaValue">Home Value Index</div>' +(props ? '' + (checkNull(props["index" + year])) : '--') + '</div>';
+this._div.innerHTML = '<h4>Lot Information</h4>' +  (props ?
+	'<b>' + props.title + '</b><br />' + props.time + ' date ' + '</b><br />' + props.discript + '</b><br />' : 'Hover over a lot');
 };
-info.addTo(map);
 
 // When a new tab is selected, this changes the year displayed
 $(".tabItem").click(function() {
