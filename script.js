@@ -39,4 +39,4 @@ $.getJSON("polygon_test.geojson", function(geojsonTest){
 	 map.fitBounds(geoJsonLayer.getBounds());
          });
 	
-});
+}
