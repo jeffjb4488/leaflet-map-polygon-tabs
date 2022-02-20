@@ -34,7 +34,7 @@ $.getJSON("test_polygon_wgs84_2.geojson", function(geojsonTest){
 	    style: style,
         onEachFeature: onEachFeature
     }).addTo(map);
-	map.fitBounds(geojson2.getBounds());
+	map.fitBounds(geoJsonLayer.getBounds());
          });
 
 // Edit range cutoffs and colors to match your data; see http://colorbrewer.org
