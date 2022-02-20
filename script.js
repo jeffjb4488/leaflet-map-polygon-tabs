@@ -29,7 +29,7 @@ new L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png
 
 
 // Edit to upload GeoJSON data file from your local directory
-$.getJSON("polygon_test_wgs_84.geojson", function(geojsonTest){
+$.getJSON("test_polygon_wgs_84.geojson", function(geojsonTest){
 // add GeoJSON layer to the map once the file is loaded
     geoJsonLayer = L.geoJson(geojsonTest ,{
 	    style: style,
