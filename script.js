@@ -34,7 +34,8 @@ $.getJSON("test_polygon_wgs84_2.geojson", function(geojsonTest){
 	    style: style,
         onEachFeature: onEachFeature
     }).addTo(map);
-	 });
+	map.fitBounds(geojson2.getBounds());
+         });
 
 // Edit range cutoffs and colors to match your data; see http://colorbrewer.org
 // Any values not listed in the ranges below displays as the last color
@@ -50,13 +51,14 @@ function getColor(d) {
 // Edit the getColor property to match data properties in your GeoJSON file
 // In this example, columns follow this pattern: index1910, index1920...
 function style(feature) {
-  return {
-    fillColor: getColor(feature.properties["Grantee" + year]),
-    weight: 1,
-    opacity: 1,
-    color: 'black',
-    fillOpacity: 0.9
-  };
+	return {
+		weight: 2,
+		opacity: 1,
+		color: 'white',
+		dashArray: '3',
+		fillOpacity: 0.7,
+		fillColor: 'green'
+	};
 }
 
 // This highlights the polygon on hover, also for mobile
