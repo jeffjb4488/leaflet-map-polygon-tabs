@@ -9,7 +9,6 @@ var map = L.map('map', {
   scrollWheelZoom: true
 });
 
-// Edit links to your GitHub repo and data source credit
 map.attributionControl
 .setPrefix('View <a href="http://github.com/jackdougherty/leaflet-map-polygon-tabs">data and code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>; design by <a href="http://ctmirror.org">CT Mirror</a>');
 
