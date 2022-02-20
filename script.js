@@ -39,8 +39,7 @@ $.getJSON("polygon_test.geojson", function(geojsonTest){
 	    style: style,
         onEachFeature: onEachFeature
     }).addTo(map);
-	 map.fitBounds(geoJsonLayer.getBounds());
-         });
+	 });
 
 // Edit range cutoffs and colors to match your data; see http://colorbrewer.org
 // Any values not listed in the ranges below displays as the last color
